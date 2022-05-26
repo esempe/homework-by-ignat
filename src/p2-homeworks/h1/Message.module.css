@@ -1,0 +1,72 @@
+.globalWrapper{
+
+    background-color: #A8E700;
+    max-width:1000px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+}
+.messageWrapper{
+
+    display: flex;
+    gap: 25px;
+}
+.avatarWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+.avatarWrapper img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: block;
+
+}
+.messageBody{
+
+    position: relative;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-left: 10px;
+    max-width: 300px;
+    min-width: 200px;
+        width:200px;
+    background-color: #002200;
+    border-radius: 9px;
+    z-index: 1;
+}
+
+.messageBody:before {
+    content: "";
+    position:absolute;
+    bottom:0px;
+    left:-85px;
+    height:50px;
+    width: 150px;
+    z-index: -2;
+
+    background:url("./assets/tri.svg") 0 0 no-repeat ;
+}
+
+.messageName{
+    color: #978BB7;
+    font-size: 17px;
+
+}
+.messageText{
+    color: #989F90;
+    margin-bottom: 10px;
+    font-size: 17px;
+
+}
+.messageTime{
+
+    color:#274926;
+
+}
+.messageTimeBlock{
+    display: flex;
+    justify-content: flex-end;
+}
