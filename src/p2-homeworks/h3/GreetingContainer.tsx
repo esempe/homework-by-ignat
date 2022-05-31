@@ -1,9 +1,10 @@
-import React, {useState} from 'react'
+import React, {ChangeEvent, MouseEvent, useState} from 'react'
 import Greeting from './Greeting'
+import {localStateType} from "./HW3";
 
 type GreetingContainerPropsType = {
-    users: any // need to fix any
-    addUserCallback: any // need to fix any
+    users: localStateType // need to fix any
+    addUserCallback: (name: string)=> void // need to fix any
 }
 
 // более простой и понятный для новичков
@@ -12,17 +13,25 @@ type GreetingContainerPropsType = {
 // более современный и удобный для про :)
 // уровень локальной логики
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => { // деструктуризация пропсов
-    const [name, setName] = useState<any>('') // need to fix any
-    const [error, setError] = useState<any>('') // need to fix any
+    const [name, setName] = useState<string>('') // need to fix any
+    const [error, setError] = useState<string>('') // need to fix any
 
-    const setNameCallback = (e: any) => { // need to fix any
-        setName('') // need to fix
+    const setNameCallback = (e:ChangeEvent<HTMLInputElement>) => { // need to fix any
+        setName(e.currentTarget.value) // need to fix
+
     }
     const addUser = () => {
-        alert(`Hello  !`) // need to fix
+            if (name){
+                setError('')
+                addUserCallback(name)
+                setName('')
+                alert(`Привет,${name} проверяешь домашку?`) // need to fix
+            }else{
+                setError('Поле не может быть пустым!')
+            }
     }
 
-    const totalUsers = 0 // need to fix
+    const totalUsers = ` кол-во людей, которые прошли мимо меня: {~${users.length}~} ` // need to fix
 
     return (
         <Greeting

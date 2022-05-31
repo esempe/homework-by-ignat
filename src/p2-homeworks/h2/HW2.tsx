@@ -12,11 +12,12 @@ export type defaultAffairsTypes = Array<AffairType>
 // constants
 
 const defaultAffairs: defaultAffairsTypes = [ // need to fix any
-    {_id: 1, name: 'React', priority: 'high'},
+    {_id: 1, name: 'chess', priority: 'high'},
     {_id: 2, name: 'anime', priority: 'low'},
     {_id: 3, name: 'games', priority: 'low'},
     {_id: 4, name: 'work', priority: 'high'},
     {_id: 5, name: 'html & css', priority: 'middle'},
+    {_id: 6, name: 'jumbo Script', priority: 'middle'},
 ]
 
 // pure helper functions
@@ -38,6 +39,8 @@ export const deleteAffair = (affairs: defaultAffairsTypes, _id: number): default
 function HW2() {
     const [affairs, setAffairs] = useState<defaultAffairsTypes>(defaultAffairs) // need to fix any
     const [filter, setFilter] = useState<FilterType>('all')
+
+
     const filteredAffairs = filterAffairs(affairs, filter)
     const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
 

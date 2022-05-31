@@ -1,0 +1,11 @@
+.affairWrapper{
+    display: flex;
+    max-width: 500px;
+    justify-content: space-between;
+}
+.priority{
+    width: 25%;
+}
+.affairName{
+    width: 25%;
+}
