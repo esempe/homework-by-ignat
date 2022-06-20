@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import GreetingContainer from './GreetingContainer'
 import {v1} from "uuid";
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 // types
 export type UserType = {
@@ -26,7 +27,7 @@ function HW3() {
             homeworks 3
 
             {/*should work (должно работать)*/}
-            <button onClick={()=>console.log(users)}>test</button>
+            <SuperButton onClick={()=>console.log(users)}>test</SuperButton>
             <GreetingContainer users={users}
                                addUserCallback={addUserCallback}
             />

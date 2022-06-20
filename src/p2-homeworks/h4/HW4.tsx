@@ -26,6 +26,7 @@ function HW4() {
 
             <div className={s.column}>
                 <SuperInputText
+                    className={''}
                     value={text}
                     onChangeText={setText}
                     onEnter={showAlert}
@@ -58,13 +59,14 @@ function HW4() {
 
                 <SuperCheckbox
                     checked={checked}
+                    isChecked={checked}
                     onChangeChecked={setChecked}
                 >
-                    some text {/*// этот текст попадёт в children*/}
+                    бебра {/*// этот текст попадёт в children*/}
                 </SuperCheckbox>
 
                 {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checked} onChange={testOnChange}/>
+                <SuperCheckbox checked={checked} isChecked={checked} onChange={testOnChange}/>
             </div>
 
             <hr/>
